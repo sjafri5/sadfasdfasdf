@@ -1,0 +1,19 @@
+class Rectangle {
+  constructor(width, height, color) {
+    this.width = width
+    this.height = height
+    this.color = color
+    this.element = document.createElement('div')
+  }
+
+  render = () => {
+    const main = document.querySelector('main')
+    this.element.style.backgroundColor = this.color
+    this.element.style.width = `${this.width}px`
+    this.element.style.height = `${this.height}px`
+    main.append(this.element)
+  }
+}
+
+
+const first = new Rectangle(20, 50, 'red')
